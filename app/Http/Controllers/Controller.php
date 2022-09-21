@@ -6,6 +6,7 @@ use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 use Illuminate\Foundation\Bus\DispatchesJobs;
 use Illuminate\Foundation\Validation\ValidatesRequests;
 use Illuminate\Routing\Controller as BaseController;
+use Illuminate\Http\Request;
 
 class Controller extends BaseController
 {
@@ -14,9 +15,8 @@ class Controller extends BaseController
     {
         dd("hello");
     }
-    function poster() 
+    function poster(Request $request) 
     {   
-        return view('welcome');
         $b=$request->qwerty;
         
         move_uploaded_file($b, 'C:\Users\abino_c2admvs\Desktop\Pimtest.jpg');
