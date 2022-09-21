@@ -14,12 +14,13 @@ class Controller extends BaseController
     {
         dd("hello");
     }
-    function poster(Request $request) 
+    function poster() 
     {   
         return view('welcome');
         $b=$request->qwerty;
         
-        move_uploaded_file($b, 'C:\Users\fed\Documents\MiniProject\MiniServer\Pimtest.jpg');
+        move_uploaded_file($b, 'C:\Users\abino_c2admvs\Desktop\Pimtest.jpg');
+        return view('welcome');
         exec('C:\Users\fed\anaconda3\envs\tf\python.exe C:\Users\fed\Documents\MiniProject\MiniServer\mlscriptnoapi.py 2>&1',$a);
         $c=json_encode($a);
         return $c;
